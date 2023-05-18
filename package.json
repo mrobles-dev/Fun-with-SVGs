@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/mrobles-dev/Fun-with-SVGs#readme",
   "dependencies": {
-    "inquirer": "^9.2.0",
+    "inquirer": "^8.2.5",
     "jest": "^29.5.0"
   }
 }
