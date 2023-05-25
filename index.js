@@ -16,15 +16,15 @@ function writeToFile(fileName, res){
   
   
   let shapeChoice;
-  if (res.shape === "Triangle") {
+  if (res.shape === "triangle") {
     shapeChoice = new Triangle();
     svg += ` <polygon points="150, 18 244, 182 56, 182" fill="${res.backColor}"/> 
     `;
-  } else if (res.shape === "Square") {
+  } else if (res.shape === "square") {
     shapeChoice = new Square();
     svg += ` <rect x="73" y="40" width="160" height="160" fill="${res.backColor}"/>
     `;
-  } else if (res.shape === "Circle") {
+  } else if (res.shape === "circle") {
     shapeChoice = new Circle();
     svg += ` <circle cx="150" cy="115" r="80" fill="${res.backColor}"/>
     `;
