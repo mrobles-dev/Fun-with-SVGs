@@ -1,24 +1,6 @@
 const inquirer = require('inquirer');
 const {Circle, Triangle, Square} = require ('./lib/shapes')
 const fs = require('fs');
-// const { File } = require('buffer');
-
-
-
-// const svgDoc = ({ color, shape, text }) =>
-//   `
-// <svg version="1.1"
-//      width="300" height="200"
-//      xmlns="http://www.w3.org/2000/svg">
-
-//   <rect width="100%" height="100%" fill= "${color}" />
-
-//   <"${shape}" cx="150" cy="100" r="80" fill="green" />
-
-//   <${text} x="150" y="125" font-size="60" text-anchor="middle" fill="white">SVG</text>
-
-// </svg>
-// `;
 
 
 function writeToFile(fileName, res){
@@ -34,22 +16,21 @@ function writeToFile(fileName, res){
   
   
   let shapeChoice;
-  if (res.shape === Triangle) {
+  if (res.shape === "Triangle") {
     shapeChoice = new Triangle();
-    svg += ` <polygon points="150, 18 244, 182 56, 182" fill=“${res.backColor}”/> 
+    svg += ` <polygon points="150, 18 244, 182 56, 182" fill="${res.backColor}"/> 
     `;
-  } else if (res.shape === Square) {
+  } else if (res.shape === "Square") {
     shapeChoice = new Square();
-    svg += ` <rect x="73" y="40" width="160" height="160" fill=“${res.backColor}"/>
+    svg += ` <rect x="73" y="40" width="160" height="160" fill="${res.backColor}"/>
     `;
-  } else if (res.shape === Circle) {
+  } else if (res.shape === "Circle") {
     shapeChoice = new Circle();
-    svg += ` <circle cx="150" cy="115" r="80" fill=“${res.backColor}”/>
+    svg += ` <circle cx="150" cy="115" r="80" fill="${res.backColor}"/>
     `;
   }
   
-  svg += `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${res.color}">
-  ${res.text}</text>`;
+  svg += `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${res.color}">${res.text}</text>`;
   
   // Closing </g> tag
   svg += "</g>";
@@ -84,7 +65,7 @@ function userPrompt(){
        { type: "list",
         message: "What color background would you like to ?",
         name: "backColor",
-        choices: ["red", "blue", "green"," black" ],
+        choices: ["red", "blue", "green","black" ],
       },
       
       {
