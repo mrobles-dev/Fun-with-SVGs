@@ -19,9 +19,9 @@ Clone repo to your local machine, open integrated terminal and run 'npm i' to in
     Enclosed are sample images as well as video walk through 
    - ![square example](./examples/logo1.png)
    
-   - ![triangle example](assets/examples/logo2.png)
+   - ![triangle example](./examples/logo2.png)
    
-   - ![video walkthrough]()
+   - [video walkthrough](https://drive.google.com/file/d/1f1t2RuFr_IFrIG_ognjAc7JuGMVWcfi0/view)
    
 
 ## Credits
